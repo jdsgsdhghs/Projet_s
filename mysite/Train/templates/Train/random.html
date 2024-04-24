@@ -1,0 +1,49 @@
+<!-- random_train.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/Train/css/style.css">
+    <title>Train Aléatoire</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="train-menu">
+                
+            </div>
+            <img src="../../static/Train/img/1train.jpg" alt="" width="150px">
+            <ul>
+                <li><a href="../Train/index">Acceuil</a></li>
+                <li><a href="#">Show</a></li>
+                <li><a href="../Train/random">Random</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-user"></i>
+    </header>
+    <a href="/Train/index" class="alea">Revenir sur la page d'Acceuil</a>
+    <div class="train">
+        <h2> Voici les informations detaillées sur le train que vous avez demandé : </h2>
+        <table>
+             <tr>
+            <th>ID</th>
+            <th>City</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+
+        </tr>
+        <tr>
+            <td>{{ numero }}</td>
+            <td>{{ ville }}</td>
+            <td>{{ depart }}</td>
+            <td>{{ arrivé }}</td>
+        </tr>
+        </table>
+    </div>
+    <a href="/Train/random" class="alea">Rafraichir la page</a>
+    
+
+</body>
+</html>

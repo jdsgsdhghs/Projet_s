@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../static/Train/css/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+     <!-- Loader section -->
+     <section id="loader" class="flex__center">
+        <span class="spinner"></span>
+    </section>
+    <header>
+
+        <nav>
+            <div class="train-menu">
+                
+            </div>
+            <img src="../../static/Train/img/1train.jpg" alt="" width="150px">
+            <ul>
+                <li><a href="../Train/index">Acceuil</a></li>
+                <li><a href="#">Show</a></li>
+                <li><a href="../Train/random">Random</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-user"></i>
+    </header>
+    <h2> Bienvenue sur notre site TrainSNCF </h2>
+    
+    
+    <h1 class="liste">Liste des trains</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>City</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Show</th>
+
+        </tr>
+        {% for train in trains %}
+        <tr>
+            <td>{{ train.TrainID }}</td>
+            <td>{{ train.City }}</td>
+            <td>{{ train.Departure_Time }}</td>
+            <td>{{ train.Arrival_Time }}</td>
+            <td> <a href="/Train/show/{{ train.TrainID }}"> Voir </a></td>
+        </tr>
+        {% endfor %}
+    </table>
+     
+</body>
+<script src="../../static/Train/css/script.js"></script>
+</html>
